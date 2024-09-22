@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  transformer:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python src/train.py  # Default command for training
+
+  translator:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python src/translate.py  # Command for translation
