@@ -12,13 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    services:
-      docker:
-        image: docker:19.03.12
-        options: >-
-          --privileged
-          --network host
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
